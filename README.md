@@ -19,5 +19,5 @@ For a preview of the component and it's props in action go to [the docs](https:/
 |-------------------|------------|-------------|---------|
 | `actionText`      | _string_   | The label of the button when the user can initiate the action | `Send Important File` |
 | `cancelText`      | _string_   | The label of the button when the user can cancel the initiated action | `Cancel Sending` |
-| `timeout`         | _number_   | The amount of time in ms the user can cancel the initiated action | `5000` |
+| `cancelDuration`         | _number_   | The amount of time in ms the user can cancel the initiated action | `5000` |
 | `onClick`         | _Function_ | The action of the button. | - |

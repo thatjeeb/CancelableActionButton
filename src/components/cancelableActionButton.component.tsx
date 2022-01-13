@@ -5,26 +5,26 @@ import { CancelableActionButtonProps } from './cancelableActionButton.definition
 
 const CancelableActionButton = (props: CancelableActionButtonProps): JSX.Element => {
   const defaultProps = new CancelableActionButtonProps(props);
-  const { onClick, timeout, actionText, cancelText } = defaultProps;
+  const { onClick, cancelDuration, actionText, cancelText } = defaultProps;
 
   const [loading, setLoading] = useState(false);
 
-  const timeoutHolder = useRef(0 as unknown as NodeJS.Timeout);
-  const transitionDuration = loading ? (timeout / 1000) + 's' : '0s';
+  const durationRef = useRef(0 as unknown as NodeJS.Timeout);
+  const transitionDuration = loading ? (cancelDuration / 1000) + 's' : '0s';
   const loaderClassName = getClassName('cancelable-action-button_loader', [
     { condition: loading, trueClassName: 'cancelable-action-button_loader--loading' },
   ]);
 
   function handleClick(): void {
     if (loading) {
-      clearTimeout(timeoutHolder.current);
+      clearTimeout(durationRef.current);
       setLoading(false);
     } else {
       setLoading(true);
-      timeoutHolder.current = setTimeout(() => {
+      durationRef.current = setTimeout(() => {
         setLoading(false);
         onClick();
-      }, timeout);
+      }, cancelDuration);
     }
   }
 

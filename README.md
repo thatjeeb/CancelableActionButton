@@ -1,4 +1,4 @@
-# Cancellable Action Button
+# Cancelable Action Button
 
 The Cancellable Action Button is a React component available to use in any React projects. Its purpose is to allow a user to cancel an action they've just initiated for a short amount of time, before the action is carried out.
 

@@ -1,9 +1,42 @@
-@import './css-reset';
+@import './sass/';
 
 .app {
-  text-align: center;
+  background: $sand;
+  min-height: 100vh;
+
+  &-header {
+    font-size: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid $mustard;
+    background: $rust;
+    color: white;
+  }
+
+  &-subheader {
+    font-size: 24px;
+  }
+
+  &-body {
+    padding: 0 5vw 50px;
+  }
 
   &-text {
-    margin: 20px 0 0;
+    margin: 15px 0;
+  }
+
+  &-prop-block {
+    padding: 10px;
+    margin: 5px 0;
+    display: block;
+    border-radius: 5px;
+    & + & {
+      margin-bottom: 25px;
+    }
+  }
+
+  &-code {
+    background: rgb(52, 52, 52);
+    color: white;
   }
 }

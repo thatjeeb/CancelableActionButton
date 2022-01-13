@@ -11,8 +11,8 @@ const CancelableActionButton = (props: CancelableActionButtonProps): JSX.Element
 
   const timeoutHolder = useRef(0 as unknown as NodeJS.Timeout);
   const transitionDuration = loading ? (timeout / 1000) + 's' : '0s';
-  const loaderClassName = getClassName('cancellable-action-button_loader', [
-    { condition: loading, trueClassName: 'cancellable-action-button_loader--loading' },
+  const loaderClassName = getClassName('cancelable-action-button_loader', [
+    { condition: loading, trueClassName: 'cancelable-action-button_loader--loading' },
   ]);
 
   function handleClick(): void {
@@ -29,7 +29,7 @@ const CancelableActionButton = (props: CancelableActionButtonProps): JSX.Element
   }
 
   return (
-    <button className='cancellable-action-button' onClick={handleClick}>
+    <button className='cancelable-action-button' onClick={handleClick}>
       {loading ? cancelText : actionText}
       <div className={loaderClassName} style={{ transitionDuration }} />
     </button>

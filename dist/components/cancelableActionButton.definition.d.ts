@@ -2,7 +2,7 @@ import type { MouseEvent } from 'react';
 export declare class CancelableActionButtonProps {
     actionText?: string;
     cancelText?: string;
-    timeout?: number;
+    cancelDuration?: number;
     onClick: (e?: MouseEvent) => void;
     constructor(props: CancelableActionButtonProps);
 }

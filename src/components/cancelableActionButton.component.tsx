@@ -1,10 +1,10 @@
-import './cancellableActionButton.scss';
+import './cancelableActionButton.scss';
 import React, { useRef, useState } from 'react';
 import { getClassName } from '../utils/classNames.utils';
-import { CancellableActionButtonProps } from './cancellableActionButton.definition';
+import { CancelableActionButtonProps } from './cancelableActionButton.definition';
 
-const CancellableActionButton = (props: CancellableActionButtonProps): JSX.Element => {
-  const defaultProps = new CancellableActionButtonProps(props);
+const CancelableActionButton = (props: CancelableActionButtonProps): JSX.Element => {
+  const defaultProps = new CancelableActionButtonProps(props);
   const { onClick, timeout, actionText, cancelText } = defaultProps;
 
   const [loading, setLoading] = useState(false);
@@ -36,4 +36,4 @@ const CancellableActionButton = (props: CancellableActionButtonProps): JSX.Eleme
   );
 }
 
-export default CancellableActionButton;
+export default CancelableActionButton;

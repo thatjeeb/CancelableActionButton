@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './App.scss';
-import CancellableActionButton from './components/cancellableActionButton.component';
+import CancelableActionButton from './components/cancelableActionButton.component';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,10 +9,10 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <CancellableActionButton onClick={clickDemo} />
+    <div className="app">
+      <CancelableActionButton onClick={clickDemo} />
 
-      <p className='App-text'>
+      <p className='app-text'>
         The important file has been sent {count} times.
       </p>
     </div>
